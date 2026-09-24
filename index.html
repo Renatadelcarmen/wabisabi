@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editorial de Moda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-principal">
+        <div class="logo-container">
+            <img src="logo.jpeg" alt="Logo de la marca">
+        </div>
+        
+        <nav class="menu-pestanas">
+            <button id="btn-inicio" class="pestana activa" onclick="cambiarPestana('inicio', 'btn-inicio')">Inicio</button>
+            <button id="btn-ed1" class="pestana" onclick="cambiarPestana('editorial1', 'btn-ed1')">&lt; 3 a la mexicana</button>
+            <button id="btn-ed2" class="pestana" onclick="cambiarPestana('editorial2', 'btn-ed2')">Memorias del silencio</button>
+            <button id="btn-ed3" class="pestana" onclick="cambiarPestana('editorial3', 'btn-ed3')">Meximalismo</button>
+        </nav>
+    </header>
+
+    <!-- INICIO -->
+    <main id="inicio" class="contenido-pestana" style="display: block;">
+        <section id="quien-soy">
+            <h2>Quién Soy</h2>
+            <p>Soy Renata Del Carmen, una diseñadora creativa con una visión dinámica y un enfoque en el storytelling visual. Mi trayectoria profesional se centra en transformar ideas complejas en experiencias vibrantes y memorables. Me apasionan las tendencias, la dirección creativa y las artes visuales, fusionando técnica y creatividad para crear piezas que cuentan historias.</p>
+        </section>
+
+        <section id="portafolio">
+            <h2>Mis Editoriales</h2>
+            <div class="grid-editoriales">
+                
+                <div class="preview tarjeta-clicable" onclick="cambiarPestana('editorial1', 'btn-ed1')">
+                    <h3>&lt; 3 a la mexicana</h3>
+                    <img src="portada1.jpeg" alt="Portada < 3 a la mexicana">
+                    <p>Rogelio y Esperanza son jóvenes y se aman con la intensidad de quienes todavía creen que compartir la vida es una promesa posible...</p>
+                    <span class="boton-falso">Leer y ver fotos -></span>
+                </div>
+
+                <div class="preview tarjeta-clicable" onclick="cambiarPestana('editorial2', 'btn-ed2')">
+                    <h3>Memorias del silencio</h3>
+                    <img src="portada2.jpeg" alt="Portada Memorias del silencio">
+                    <p>Inspiración: Memorias de una geisha × estética del mimo. Un viaje desde la inocencia y la pérdida, hasta encontrar la voz en el escenario.</p>
+                    <span class="boton-falso">Leer y ver fotos -></span>
+                </div>
+
+                <div class="preview tarjeta-clicable" onclick="cambiarPestana('editorial3', 'btn-ed3')">
+                    <h3>Meximalismo</h3>
+                    <img src="portada3.jpeg" alt="Portada Meximalismo">
+                    <p>Una celebración absoluta de la abundancia, donde se rechaza la sobriedad del minimalismo en favor del folclore.</p>
+                    <span class="boton-falso">Ver fotos -></span>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- EDITORIAL 1 -->
+    <main id="editorial1" class="contenido-pestana" style="display: none;">
+        <section>
+            <h2>&lt; 3 a la mexicana</h2>
+            <div style="text-align: justify; margin-bottom: 40px;">
+                <p>Rogelio y Esperanza son jóvenes y se aman con la intensidad de quienes todavía creen que compartir la vida es una promesa posible. Hoy han decidido casarse. No habrá una gran fiesta, invitados ni mesas adornadas: solamente ellos dos, vestidos para la ocasión, jurándose amor eterno ante Dios.</p>
+                <p>Para celebrar su unión entre el vapor de las cazuelas, el aroma de las tortillas recién calentadas y el ruido cotidiano de la calle, los recién casados comparten tacos y copas improvisadas con jugo de naranja. No necesitan nada más. En esa mesa sencilla celebran el pasado que los reunió y contemplan, entre miradas cómplices, el futuro incierto que ahora han elegido enfrentar juntos.</p>
+                <p>Cuando la comida termina, Rogelio y Esperanza se levantan y caminan hacia la parada del camión. Aún llevan puesta la ropa de su boda pero deberán ir cada uno a su casa con la esperanza de al final formar un hogar juntos.</p>
+            </div>
+        </section>
+        
+        <section class="carrusel-contenedor" id="carrusel-ed1">
+            <div class="carrusel-3d">
+                <img src="foto1_ed1.jpeg" class="foto-carrusel" alt="Look 1" onclick="abrirModal(this.src)">
+                <img src="foto2_ed1.jpeg" class="foto-carrusel" alt="Look 2" onclick="abrirModal(this.src)">
+                <img src="foto3_ed1.jpeg" class="foto-carrusel" alt="Look 3" onclick="abrirModal(this.src)">
+                <img src="foto4_ed1.jpeg" class="foto-carrusel" alt="Look 4" onclick="abrirModal(this.src)">
+                <img src="foto5_ed1.jpeg" class="foto-carrusel" alt="Look 5" onclick="abrirModal(this.src)">
+                <img src="foto6_ed1.jpeg" class="foto-carrusel" alt="Look 6" onclick="abrirModal(this.src)">
+            </div>
+            <div class="controles-carrusel">
+                <button onclick="moverCarrusel('carrusel-ed1', -1)">&lt; Anterior</button>
+                <button onclick="moverCarrusel('carrusel-ed1', 1)">Siguiente &gt;</button>
+            </div>
+        </section>
+
+        <section class="seccion-creditos">
+            <h3>Créditos del equipo</h3>
+            <img src="creditos1.jpeg" alt="Créditos">
+        </section>
+    </main>
+
+    <!-- EDITORIAL 2 -->
+    <main id="editorial2" class="contenido-pestana" style="display: none;">
+        <section>
+            <h2>Memorias del silencio</h2>
+            <div style="text-align: justify; margin-bottom: 40px;">
+                <p><em>Inspiración: Memorias de una geisha × estética del mimo</em></p>
+                
+                <h3>I. La Felicidad (La Inocencia)</h3>
+                <p>En un principio, su mundo estaba pintado con la ligereza de los globos bajo el sol. Era un niño que respiraba colores, cuya vida entera giraba en torno a la seguridad que le brindaba su papá. En ese universo intacto, la felicidad era ingenua, ruidosa y libre; donde el futuro no existía, solo el calor de sentirse protegido.</p>
+                
+                <h3>II. La Pérdida (El Abandono)</h3>
+                <p>Pero el hilo de esa vida perfecta se cortó. La figura protectora de su papá se desvaneció, dejándolo a la deriva en un mundo repentinamente hostil. Con el peso brutal del abandono, el color se escurrió de su ropa y las palabras se ahogaron en su garganta. El niño se rompió en aquel instante de vulnerabilidad, aprendiendo a la fuerza que la tristeza más profunda y desgarradora no tiene sonido.</p>
+
+                <h3>III. La Esperanza (El Encuentro)</h3>
+                <p>Vagando en blanco y negro por la indiferencia de la ciudad, sus ojos se cruzaron con una aparición que alteró su destino: un payaso en medio de la plaza. A pesar de la lluvia y el gris del entorno, el payaso vestía colores estridentes y repartía alegría a los extraños. En esa figura, el niño no vio solo un truco, vio una revelación: comprendió que la tragedia podía transformarse en arte, y que el dolor podía disfrazarse para hacer sonreír a otros. Esa fue la chispa, su única esperanza para volver a sentir.</p>
+
+                <h3>IV. La Felicidad de Vuelta (El Nacimiento)</h3>
+                <p>Inspirado, decidió que no copiaría los colores del payaso, sino que abrazaría su propio vacío. Así nació el Mimo. Transformó el mutismo que le dejó el abandono en su mayor escudo y lenguaje. Con guantes blancos y un suéter a rayas, tomó las riendas de su historia. La felicidad regresó a sus manos, pero ya no era frágil ni dependía de nadie más. Comenzó a esculpir su dolor buscando desesperadamente su mejor versión.</p>
+
+                <h3>V. Su Mejor Versión (El Escenario)</h3>
+                <p>Las calles se convirtieron en su teatro. El Mimo logró lo impensable: cautivó a la multitud, transformando su trauma en un magnetismo escénico. El vacío que alguna vez dejó su padre ahora se llenaba con admiración, las miradas y los aplausos de su público. Disfrutó del éxtasis del reconocimiento, dominando a la perfección el arte de hacer vibrar a la audiencia sin pronunciar una sola sílaba.</p>
+            </div>
+        </section>
+        
+        <section class="carrusel-contenedor" id="carrusel-ed2">
+            <div class="carrusel-3d">
+                <img src="foto1_ed2.jpeg" class="foto-carrusel" alt="Look 1" onclick="abrirModal(this.src)">
+                <img src="foto2_ed2.jpeg" class="foto-carrusel" alt="Look 2" onclick="abrirModal(this.src)">
+                <img src="foto3_ed2.jpeg" class="foto-carrusel" alt="Look 3" onclick="abrirModal(this.src)">
+                <img src="foto4_ed2.jpeg" class="foto-carrusel" alt="Look 4" onclick="abrirModal(this.src)">
+            </div>
+            <div class="controles-carrusel">
+                <button onclick="moverCarrusel('carrusel-ed2', -1)">&lt; Anterior</button>
+                <button onclick="moverCarrusel('carrusel-ed2', 1)">Siguiente &gt;</button>
+            </div>
+        </section>
+
+        <section class="seccion-creditos">
+            <h3>Créditos del equipo</h3>
+            <img src="Creditos2.jpeg" alt="Créditos">
+        </section>
+    </main>
+
+    <!-- EDITORIAL 3 -->
+    <main id="editorial3" class="contenido-pestana" style="display: none;">
+        <section>
+            <h2>Meximalismo</h2>
+            <div style="text-align: justify; margin-bottom: 40px;">
+                <p>Una celebración absoluta de la abundancia, donde se rechaza la sobriedad del minimalismo en favor de una explosión ecléctica de identidad, historia y folclore.</p>
+            </div>
+        </section>
+        
+        <section class="carrusel-contenedor" id="carrusel-ed3">
+            <div class="carrusel-3d">
+                <img src="foto1_ed3.jpeg" class="foto-carrusel" alt="Look 1" onclick="abrirModal(this.src)">
+                <img src="foto2_ed3.jpeg" class="foto-carrusel" alt="Look 2" onclick="abrirModal(this.src)">
+                <img src="foto3_ed3.jpeg" class="foto-carrusel" alt="Look 3" onclick="abrirModal(this.src)">
+                <img src="foto4_ed3.jpeg" class="foto-carrusel" alt="Look 4" onclick="abrirModal(this.src)">
+                <img src="foto5_ed3.jpeg" class="foto-carrusel" alt="Look 5" onclick="abrirModal(this.src)">
+                <img src="foto6_ed3.jpeg" class="foto-carrusel" alt="Look 6" onclick="abrirModal(this.src)">
+            </div>
+            <div class="controles-carrusel">
+                <button onclick="moverCarrusel('carrusel-ed3', -1)">&lt; Anterior</button>
+                <button onclick="moverCarrusel('carrusel-ed3', 1)">Siguiente &gt;</button>
+            </div>
+        </section>
+
+        <section class="seccion-creditos">
+            <h3>Créditos del equipo</h3>
+            <img src="creditos3.jpeg" alt="Créditos">
+        </section>
+    </main>
+
+    <!-- Modal (Lightbox) para fotos grandes -->
+    <div id="modal-foto" class="modal" onclick="cerrarModal()">
+        <span class="cerrar-modal">&times;</span>
+        <img class="modal-contenido" id="img-modal">
+    </div>
+
+    <!-- Footer de Contacto -->
+    <footer>
+        <h2>Contacto</h2>
+        <p>Correo: <a href="mailto:renata.delcarmennn@gmail.com">renata.delcarmennn@gmail.com</a></p>
+        <p>Instagram: <a href="https://instagram.com/esflashxfairy" target="_blank">@esflashxfairy</a></p>
+    </footer>
+
+    <!-- Lógica JavaScript -->
+    <script>
+        /* Pestañas */
+        function cambiarPestana(idPestana, idBotonMenu) {
+            let contenidos = document.getElementsByClassName("contenido-pestana");
+            for (let i = 0; i < contenidos.length; i++) {
+                contenidos[i].style.display = "none";
+            }
+
+            let pestanas = document.getElementsByClassName("pestana");
+            for (let i = 0; i < pestanas.length; i++) {
+                pestanas[i].className = pestanas[i].className.replace(" activa", "");
+            }
+
+            document.getElementById(idPestana).style.display = "block";
+            document.getElementById(idBotonMenu).className += " activa";
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if(idPestana.startsWith('editorial')) {
+                let idCarrusel = 'carrusel-' + idPestana.replace('editorial', 'ed');
+                actualizarCarrusel(idCarrusel);
+            }
+        }
+
+        /* Carrusel Cover Flow */
+        const estadoCarrusel = {
+            'carrusel-ed1': 0,
+            'carrusel-ed2': 0,
+            'carrusel-ed3': 0
+        };
+
+        function moverCarrusel(idCarrusel, direccion) {
+            const contenedor = document.getElementById(idCarrusel);
+            const fotos = contenedor.querySelectorAll('.foto-carrusel');
+            
+            estadoCarrusel[idCarrusel] += direccion;
+            
+            if (estadoCarrusel[idCarrusel] < 0) estadoCarrusel[idCarrusel] = 0;
+            if (estadoCarrusel[idCarrusel] >= fotos.length) estadoCarrusel[idCarrusel] = fotos.length - 1;
+            
+            actualizarCarrusel(idCarrusel);
+        }
+
+        function actualizarCarrusel(idCarrusel) {
+            const contenedor = document.getElementById(idCarrusel);
+            if(!contenedor) return;
+            
+            const fotos = contenedor.querySelectorAll('.foto-carrusel');
+            const indexActual = estadoCarrusel[idCarrusel];
+
+            fotos.forEach((foto, i) => {
+                let offset = i - indexActual; 
+                let transform = '';
+                let zIndex = fotos.length - Math.abs(offset);
+                let opacity = 1;
+
+                if (offset === 0) {
+                    transform = 'translateX(0%) translateZ(150px) rotateY(0deg)';
+                } else if (offset < 0) {
+                    transform = `translateX(${offset * 20 - 40}%) translateZ(0px) rotateY(55deg)`;
+                } else {
+                    transform = `translateX(${offset * 20 + 40}%) translateZ(0px) rotateY(-55deg)`;
+                }
+
+                if (Math.abs(offset) > 3) {
+                    opacity = 0;
+                }
+
+                foto.style.transform = transform;
+                foto.style.zIndex = zIndex;
+                foto.style.opacity = opacity;
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            Object.keys(estadoCarrusel).forEach(id => actualizarCarrusel(id));
+        });
+
+        /* Modal Lightbox */
+        function abrirModal(src) {
+            const modal = document.getElementById("modal-foto");
+            const imgModal = document.getElementById("img-modal");
+            imgModal.src = src;
+            modal.style.display = "flex"; // Lo mostramos
+        }
+
+        function cerrarModal() {
+            document.getElementById("modal-foto").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
